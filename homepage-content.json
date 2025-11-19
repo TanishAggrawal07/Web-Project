@@ -1,0 +1,31 @@
+{
+  "testimonials": [
+    {
+      "quote": "CampusConnect helped us secure three major sponsorships for our annual tech fest in record time. The platform is intuitive and effective!",
+      "author": "— Sarah K., Event Coordinator, Tech University"
+    },
+    {
+      "quote": "We used to struggle finding the right events. Now, we get targeted exposure to our key demographic. Excellent return on investment.",
+      "author": "— Mark L., Marketing Director, Global Solutions"
+    },
+    {
+      "quote": "The secure payment and contract management tools give us peace of mind. A truly professional solution for college-vendor collaboration.",
+      "author": "— David R., Finance Department, City College"
+    }
+  ],
+  "coreBenefits": [
+    {
+      "title": "Easy Sponsorships",
+      "description": "Connect with potential sponsors and manage sponsorships all in one place."
+    },
+    {
+      "title": "Secure Payments",
+      "description": "Reliable and secure payment processing for all transactions."
+    },
+    {
+      "title": "Affordable Visibility",
+      "description": "Cost-effective brand exposure opportunities for businesses."
+    }
+  ]
+}
+
