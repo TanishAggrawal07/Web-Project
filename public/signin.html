@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - CampusConnect</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">CampusConnect</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="vendor-portal.html">Vendors</a></li>
+                <li><a href="institution-portal.html">Institutions</a></li>
+                <li data-nav-signin><a href="signin.html" class="active">Sign In</a></li>
+                <li data-nav-signup><a href="signup.html" class="signup-btn">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="signup-section">
+            <h1 style="text-align: center; margin-bottom: 2.5rem;">Choose the right portal</h1>
+
+            <div class="signup-container" style="justify-content: center; gap: 4rem;">
+                <div class="signup-form"
+                    style="text-align: center; padding: 3rem 2rem; flex: 0 0 45%; max-width: 350px;">
+                    <h2 style="margin-bottom: 1rem;">Institution Sign In</h2>
+                    <p style="margin-bottom: 1.5rem; color: #4B5563;">Manage your sponsorship phases and review vendor
+                        bids.</p>
+                    <a href="institution-signin.html" class="cta-button" style="width: 100%;">Sign in as Institution</a>
+                </div>
+
+                <div class="signup-form"
+                    style="text-align: center; padding: 3rem 2rem; flex: 0 0 45%; max-width: 350px;">
+                    <h2 style="margin-bottom: 1rem;">Vendor Sign In</h2>
+                    <p style="margin-bottom: 1.5rem; color: #4B5563;">Quote for live phases and track sponsorship
+                        conversations.</p>
+                    <a href="vendor-signin.html" class="cta-button" style="width: 100%;">Sign in as Vendor</a>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 4rem;">
+                <p style="font-size: 1.1rem; color: #4B5563;">
+                    Still need to register?
+                    <a href="signup.html"
+                        style="color: #1E3A8A; font-weight: 600; text-decoration: none; border-bottom: 2px solid #F59E0B; padding-bottom: 2px;">Create
+                        an account</a>
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 CampusConnect. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="nav.js"></script>
+</body>
+
+</html>

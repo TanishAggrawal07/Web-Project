@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendor Portal - CampusConnect</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-portal="vendor">
+    <header>
+        <nav class="navbar">
+            <div class="logo">CampusConnect</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="vendor-portal.html" class="active">Vendors</a></li>
+                <li><a href="institution-portal.html">Institutions</a></li>
+                <li data-nav-signin><a href="signin.html">Sign In</a></li>
+                <li data-nav-signup><a href="signup.html" class="signup-btn">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="portal-hero">
+            <div>
+                <h1>Vendor workspace</h1>
+                <p>Explore live institutional phases and respond with competitive numbers.</p>
+            </div>
+            <button class="outline-btn" data-portal-logout="vendor">Sign out</button>
+        </section>
+
+        <section class="portal-section">
+            <header class="portal-header">
+                <div>
+                    <h2>Active institutional phases</h2>
+                    <p>Gold, Silver and Platinum inputs coming directly from institutions.</p>
+                </div>
+                <span class="status-pill neutral" data-portal-status>Loading...</span>
+            </header>
+            <div id="vendor-tier-board"></div>
+        </section>
+
+        <section class="portal-section">
+            <header class="portal-header">
+                <div>
+                    <h2>Submit a sponsorship quote</h2>
+                    <p>Pick an institution, phase, and place your bid.</p>
+                </div>
+            </header>
+            <form id="vendor-quote-form" class="portal-form">
+                <div class="form-row">
+                    <label for="vendor-institution">Institution</label>
+                    <select id="vendor-institution" name="institutionId" required></select>
+                </div>
+                <div class="form-row">
+                    <label for="vendor-tier">Phase</label>
+                    <select id="vendor-tier" name="tierPhase" required></select>
+                </div>
+                <div class="form-row">
+                    <label for="vendor-amount">Quote amount</label>
+                    <input type="number" id="vendor-amount" name="vendorAmount" min="0" step="100" required>
+                </div>
+                <div class="form-row">
+                    <label for="vendor-notes">Notes</label>
+                    <textarea id="vendor-notes" name="vendorNotes" rows="3"
+                        placeholder="Add context or negotiable perks"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send quote</button>
+                <p class="form-status" data-portal-form-status></p>
+            </form>
+        </section>
+
+        <section class="portal-section">
+            <header class="portal-header">
+                <div>
+                    <h2>Your recent quotes</h2>
+                    <p>Track every interaction and status change.</p>
+                </div>
+            </header>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Institution</th>
+                            <th>Phase</th>
+                            <th>Your quote</th>
+                            <th>Ask</th>
+                            <th>Status</th>
+                            <th>Updated</th>
+                        </tr>
+                    </thead>
+                    <tbody id="vendor-quotes-table">
+                        <tr>
+                            <td colspan="6" style="text-align:center;">No quotes yet</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 CampusConnect. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="portal.js"></script>
+    <script src="nav.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Registration - CampusConnect</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">CampusConnect</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="vendor-portal.html">Vendors</a></li>
+                <li><a href="institution-portal.html" class="active">Institutions</a></li>
+                <li data-nav-signin><a href="signin.html">Sign In</a></li>
+                <li data-nav-signup><a href="signup.html" class="signup-btn">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-section">
+            <h1 style="text-align: center; margin-bottom: 2rem;">Register Your College</h1>
+
+            <div class="contact-form">
+                <h2>Institution Account Details</h2>
+                <form id="institution-signup-form" data-auth-form="institution-signup">
+                    <div class="form-group">
+                        <label for="institution-name">Institution Name</label>
+                        <input type="text" id="institution-name" name="institutionName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="institution-contact">Contact Person</label>
+                        <input type="text" id="institution-contact" name="contactName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="institution-email">Email</label>
+                        <input type="email" id="institution-email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="institution-phone">Phone</label>
+                        <input type="tel" id="institution-phone" name="phone" placeholder="+1 555 000 0000">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="institution-password">Password</label>
+                        <input type="password" id="institution-password" name="password" required>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Complete Institution Sign Up</button>
+                    <p class="form-status" data-auth-status></p>
+                </form>
+            </div>
+        </section>
+    </main>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>College Registration - CampusConnect</title>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar">
+                <div class="logo">CampusConnect</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="vendor-portal.html">Vendors</a></li>
+                    <li><a href="institution-portal.html" class="active">Institutions</a></li>
+                    <li data-nav-signin><a href="signin.html">Sign In</a></li>
+                    <li data-nav-signup><a href="signup.html" class="signup-btn">Sign Up</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="contact-section">
+                <h1 style="text-align: center; margin-bottom: 2rem;">Register Your College</h1>
+
+                <div class="contact-form">
+                    <h2>Institution Account Details</h2>
+                    <form id="institution-signup-form" data-auth-form="institution-signup">
+                        <div class="form-group">
+                            <label for="institution-name">Institution Name</label>
+                            <input type="text" id="institution-name" name="institutionName" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="institution-contact">Contact Person</label>
+                            <input type="text" id="institution-contact" name="contactName" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="institution-email">Email</label>
+                            <input type="email" id="institution-email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="institution-phone">Phone</label>
+                            <input type="tel" id="institution-phone" name="phone" placeholder="+1 555 000 0000">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="institution-password">Password</label>
+                            <input type="password" id="institution-password" name="password" required>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Complete Institution Sign Up</button>
+                        <p class="form-status" data-auth-status></p>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2025 CampusConnect. All rights reserved.</p>
+            </div>
+        </footer>
+        <script src="auth.js"></script>
+        <script src="nav.js"></script>
+    </body>
+
+    </html>

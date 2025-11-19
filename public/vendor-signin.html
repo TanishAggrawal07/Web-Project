@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendor Sign In - CampusConnect</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">CampusConnect</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="vendor-portal.html" class="active">Vendors</a></li>
+                <li><a href="institution-portal.html">Institutions</a></li>
+                <li data-nav-signin><a href="signin.html">Sign In</a></li>
+                <li data-nav-signup><a href="signup.html" class="signup-btn">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-section">
+            <h1 style="text-align: center; margin-bottom: 2rem;">Sign in as a Vendor</h1>
+
+            <div class="contact-form">
+                <form data-auth-form="vendor-signin">
+                    <div class="form-group">
+                        <label for="vendor-login-email">Email Address</label>
+                        <input type="email" id="vendor-login-email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="vendor-login-password">Password</label>
+                        <input type="password" id="vendor-login-password" name="password" required>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Access Vendor Portal</button>
+                    <p class="form-status" data-auth-status></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 CampusConnect. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="auth.js"></script>
+    <script src="nav.js"></script>
+</body>
+
+</html>

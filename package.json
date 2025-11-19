@@ -1,0 +1,31 @@
+{
+  "name": "web-project",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "sponsorship",
+    "portal",
+    "express",
+    "mongodb"
+  ],
+  "author": "Dean CCSIT",
+  "license": "ISC",
+  "description": "Sponsorship platform for vendors and institutions with tier-based pricing",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.20.0",
+    "morgan": "^1.10.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}
