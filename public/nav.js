@@ -61,12 +61,31 @@ const updateNavigation = (session) => {
     const signupItem = document.querySelector('[data-nav-signup]');
     const navLinks = document.querySelector('.nav-links');
 
+    // Get portal navigation items
+    const vendorPortalLink = document.querySelector('a[href="vendor-portal.html"]');
+    const institutionPortalLink = document.querySelector('a[href="institution-portal.html"]');
+
     if (!navLinks) return;
 
     if (session) {
         // User is logged in - hide auth links and show user info
         if (signinItem) signinItem.style.display = 'none';
         if (signupItem) signupItem.style.display = 'none';
+
+        // Hide the opposite portal link based on user type
+        if (session.type === 'vendor') {
+            // Vendors should NOT see institution portal
+            if (institutionPortalLink) {
+                const institutionPortalItem = institutionPortalLink.closest('li');
+                if (institutionPortalItem) institutionPortalItem.style.display = 'none';
+            }
+        } else if (session.type === 'institution') {
+            // Institutions should NOT see vendor portal
+            if (vendorPortalLink) {
+                const vendorPortalItem = vendorPortalLink.closest('li');
+                if (vendorPortalItem) vendorPortalItem.style.display = 'none';
+            }
+        }
 
         // Create user info display
         const userInfoItem = document.createElement('li');
@@ -98,9 +117,19 @@ const updateNavigation = (session) => {
         navLinks.appendChild(userInfoItem);
         navLinks.appendChild(logoutItem);
     } else {
-        // User is logged out - ensure auth links are visible
+        // User is logged out - ensure auth links and both portals are visible
         if (signinItem) signinItem.style.display = '';
         if (signupItem) signupItem.style.display = '';
+
+        // Show both portal links when logged out
+        if (vendorPortalLink) {
+            const vendorPortalItem = vendorPortalLink.closest('li');
+            if (vendorPortalItem) vendorPortalItem.style.display = '';
+        }
+        if (institutionPortalLink) {
+            const institutionPortalItem = institutionPortalLink.closest('li');
+            if (institutionPortalItem) institutionPortalItem.style.display = '';
+        }
     }
 };
 

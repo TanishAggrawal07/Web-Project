@@ -409,15 +409,32 @@ const initInstitutionPortal = (client, tokenKey) => {
 const bootPortal = () => {
   const portal = document.body.dataset.portal;
   if (!portal) return;
+
   const tokenKey =
     portal === 'institution' ? 'institutionToken' : 'vendorToken';
+  const oppositeTokenKey =
+    portal === 'institution' ? 'vendorToken' : 'institutionToken';
   const signinRoute =
     portal === 'institution' ? 'institution-signin.html' : 'vendor-signin.html';
+  const ownPortalRoute =
+    portal === 'institution' ? 'institution-portal.html' : 'vendor-portal.html';
+
   const token = localStorage.getItem(tokenKey);
+  const oppositeToken = localStorage.getItem(oppositeTokenKey);
+
+  // Check if user is trying to access the wrong portal
+  if (oppositeToken && !token) {
+    // User has the opposite token - redirect to their own portal
+    const correctPortal = portal === 'institution' ? 'vendor-portal.html' : 'institution-portal.html';
+    window.location.href = correctPortal;
+    return;
+  }
+
   if (!token) {
     window.location.href = signinRoute;
     return;
   }
+
   const onExpire = () => {
     localStorage.removeItem(tokenKey);
     window.location.href = signinRoute;

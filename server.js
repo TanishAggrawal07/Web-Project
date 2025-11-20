@@ -1,9 +1,6 @@
 const path = require('path');
 require('dotenv').config();
 const express = require('express');
-const morgan = require('morgan');
-const cors = require('cors');
-const cookieParser = require('cookie-parser');
 const connectDB = require('./config/db');
 
 const vendorRoutes = require('./routes/vendors');
@@ -13,10 +10,7 @@ const quoteRoutes = require('./routes/quotes');
 const app = express();
 connectDB();
 
-app.use(cors());
 app.use(express.json());
-app.use(cookieParser());
-app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/api/vendors', vendorRoutes);
@@ -42,4 +36,5 @@ const port = process.env.PORT || 4000;
 const server = app.listen(port, () => {
   console.log(`Server running on port ${port}`);
   console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
+  console.log("http://localhost:4000/")
 });

@@ -6,10 +6,7 @@ const connectDB = async () => {
     'mongodb://127.0.0.1:27017/sponsorship_portal';
 
   try {
-    await mongoose.connect(uri, {
-      autoIndex: true,
-      serverSelectionTimeoutMS: 5000
-    });
+    await mongoose.connect(uri);
 
     mongoose.connection.on('connected', () => {
       const dbName = mongoose.connection.db.databaseName;
